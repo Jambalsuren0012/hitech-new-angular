@@ -17,6 +17,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { FooterComponent } from './footer/footer.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
+import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
+import { RouterLink } from '@angular/router';
+import { RouterLinkActive } from '@angular/router';
 
 const approutes: Routes = [
   { path: 'comingsoon', component: ComingSoonComponent },
@@ -35,7 +39,14 @@ const approutes: Routes = [
     FooterComponent,
     ComingSoonComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(approutes)],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    CommonModule,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
+  ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })
