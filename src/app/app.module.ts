@@ -13,8 +13,14 @@ import { OutsourcingComponent } from './outsourcing/outsourcing.component';
 import { ServiceSupportComponent } from './service-support/service-support.component';
 import { Ms365Component } from './ms365/ms365.component';
 import { FortinetComponent } from './fortinet/fortinet.component';
+import { RouterModule, Routes } from '@angular/router';
 
 import { FooterComponent } from './footer/footer.component';
+import { ComingSoonComponent } from './coming-soon/coming-soon.component';
+
+const approutes: Routes = [
+  { path: 'comingsoon', component: ComingSoonComponent },
+];
 
 @NgModule({
   declarations: [
@@ -27,8 +33,9 @@ import { FooterComponent } from './footer/footer.component';
     Ms365Component,
     FortinetComponent,
     FooterComponent,
+    ComingSoonComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(approutes)],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })
