@@ -13,11 +13,21 @@ import { OutsourcingComponent } from './outsourcing/outsourcing.component';
 import { ServiceSupportComponent } from './service-support/service-support.component';
 import { Ms365Component } from './ms365/ms365.component';
 import { FortinetComponent } from './fortinet/fortinet.component';
-import { ContactComponent } from './contact/contact.component';
+
 import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HeaderComponent, ItManagedServiceComponent, OutsourcingComponent, ServiceSupportComponent, Ms365Component, FortinetComponent, ContactComponent, FooterComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    HeaderComponent,
+    ItManagedServiceComponent,
+    OutsourcingComponent,
+    ServiceSupportComponent,
+    Ms365Component,
+    FortinetComponent,
+    FooterComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],

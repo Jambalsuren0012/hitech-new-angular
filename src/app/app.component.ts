@@ -13,6 +13,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
     <app-service-support #serviceSupport></app-service-support>
 
     <app-footer #footer> </app-footer>
+
     <!-- <app-contact> </app-contact> -->
   `,
   styles: [],

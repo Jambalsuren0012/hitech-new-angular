@@ -2,6 +2,7 @@
   background-image: url(../../assets/img/hitech\ header\ background.png);
   background-size: cover;
   height: 500px;
+  width: full;
 }
 .text-gradient-gray {
   background-image: linear-gradient(90deg, #ccc, #666);

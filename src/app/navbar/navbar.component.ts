@@ -33,4 +33,8 @@ export class NavbarComponent {
   tosupport() {
     document.getElementById('service')?.scrollIntoView({ behavior: 'smooth' });
   }
+  showModal = false;
+  toggleModal() {
+    this.showModal = !this.showModal;
+  }
 }

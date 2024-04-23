@@ -38,7 +38,7 @@
             <a>Support</a>
           </li>
           <li class="md:px-4 md:py-2 text-md hover:text-indigo-800">
-            <a routerLink="/contact">Contact</a>
+            <a (click)="toggleModal()" routerLink="/contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -63,4 +63,142 @@
       </div>
     </div>
   </header>
+
+  <section
+    class="bg-white"
+    *ngIf="showModal"
+    class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex"
+  >
+    <button
+      type="button"
+      (click)="toggleModal()"
+      class="absolute top-20 right-80 m-4 p-2 rounded-full bg-black hover:bg-gray-300 focus:bg-gray-300 focus:outline-none"
+    >
+      <svg
+        class="w-5 h-5 text-gray-600"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M14.293 5.293a1 1 0 00-1.414 1.414L12 6.414l-1.879 1.879a1 1 0 101.414 1.414L13.414 7l1.879 1.879a1 1 0 101.414-1.414L14.414 5l1.879-1.879a1 1 0 00-1.414-1.414L13 3.586 11.121 1.707a1 1 0 00-1.414 1.414L11.586 5 9.707 6.879a1 1 0 101.414 1.414L13 6.414l1.879 1.879a1 1 0 101.414-1.414L14.414 5l1.879-1.879a1 1 0 00-1.414-1.414L13 3.586 11.121 1.707a1 1 0 00-1.414 1.414L11.586 5 9.707 6.879a1 1 0 101.414 1.414L13 6.414l1.879 1.879a1 1 0 101.414-1.414L14.414 5l1.879-1.879a1 1 0 00-1.414-1.414L13 3.586 11.121 1.707a1 1 0 00-1.414 1.414L11.586 5 9.707 6.879a1 1 0 101.414 1.414L13 6.414l1.879 1.879a1 1 0 101.414-1.414L14.414 5z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </button>
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+      <div
+        class="relative flex items-end px-4 pb-10 pt-60 sm:pb-16 md:justify-center lg:pb-24 bg-gray-50 sm:px-6 lg:px-8"
+      >
+        <div class="absolute inset-0">
+          <img
+            class="object-cover object-top w-full h-full"
+            src="../../assets/img/contact img.png"
+            alt=""
+          />
+        </div>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black to-transparent"
+        >
+          <img
+            class="pl-4"
+            src="../../assets/img/hitech logo contact.png"
+            alt=""
+          />
+        </div>
+
+        <div class="relative">
+          <div
+            class="w-full max-w-xl xl:w-full xl:mx-auto xl:pr-24 xl:max-w-xl"
+          >
+            <h3 class="text-4xl font-bold text-white">
+              Join 35k+ web professionals &
+              <br class="hidden xl:block" />build your website
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex items-center justify-center px-4 py-10 bg-white sm:px-6 lg:px-8 sm:py-16 lg:py-24"
+      >
+        <div class="xl:w-full xl:max-w-sm 2xl:max-w-md xl:mx-auto">
+          <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl">
+            Холбоо барих
+          </h2>
+          <p class="mt-2 text-base text-gray-600">
+            Бид тантай 24 цагын дотор холбогдох болно. Заасан төсөвт багтаан
+            брэндээ өсгөж, өсгөхөд тань хэрхэн туслах талаар дэлгэрэнгүй
+            тайлбарлах болно.
+          </p>
+
+          <form action="#" method="POST" class="mt-8">
+            <div class="space-y-5">
+              <div>
+                <form action="#" class="space-y-8">
+                  <div>
+                    <label
+                      for="email"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                      >Имайл</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                      placeholder="name@company.com"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="subject"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                      >Subject</label
+                    >
+                    <input
+                      type="text"
+                      id="subject"
+                      class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                      placeholder="Let us know how we can help you"
+                      required
+                    />
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label
+                      for="message"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+                      >Your message</label
+                    >
+                    <textarea
+                      id="message"
+                      rows="6"
+                      class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                      placeholder="Leave a comment..."
+                    ></textarea>
+                  </div>
+                </form>
+              </div>
+
+              <div>
+                <button
+                  type="submit"
+                  class="inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-white transition-all duration-200 border border-transparent rounded-md bg-gradient-to-r from-fuchsia-600 to-blue-600 focus:outline-none hover:opacity-80 focus:opacity-80"
+                >
+                  Хүсэлт илгээх
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div
+    *ngIf="showModal"
+    class="opacity-25 fixed inset-0 z-40 bg-black"
+    (click)="toggleModal()"
+  ></div>
 </div>
