@@ -25,7 +25,7 @@
             routerLinkActive="activate"
             class="md:px-4 md:py-2 text-md text-white hover:text-indigo-800"
           >
-            <a>Нүүр</a>
+            <a>Home</a>
           </li>
           <li class="md:px-4 md:py-2 text-md hover:text-indigo-800">
             <a (click)="tooutsource()" routerLinkActive="activate"> Service </a>
@@ -65,7 +65,7 @@
   </header>
 
   <section
-    class="bg-white"
+    class="bg-white curtains"
     *ngIf="showModal"
     class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex"
   >
@@ -185,9 +185,18 @@
               <div>
                 <button
                   type="submit"
-                  class="inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-white transition-all duration-200 border border-transparent rounded-md bg-gradient-to-r from-fuchsia-600 to-blue-600 focus:outline-none hover:opacity-80 focus:opacity-80"
+                  class="inline-flex gap-4 items-center justify-center w-full px-4 py-4 text-base font-semibold transition-all duration-200 border border-transparent rounded-md focus:outline-none hover:opacity-80 focus:opacity-80"
                 >
                   Хүсэлт илгээх
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                  >
+                    <path
+                      d="M7 7h8.586L5.293 17.293l1.414 1.414L17 8.414V17h2V5H7v2z"
+                    />
+                  </svg>
                 </button>
               </div>
             </div>
