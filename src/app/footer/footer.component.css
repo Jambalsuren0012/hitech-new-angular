@@ -1,7 +1,7 @@
 .footerbg {
-  background-image: url(../../assets/img/footerbg.png);
+  /* background-image: url(../../assets/img/footerbg.png); */
+  background-image: url(../../assets/img/hitech\ header\ background.png);
   background-size: cover;
-  height: 400px;
   width: full;
 }
 .text-gradient-gray {
@@ -9,4 +9,8 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+.img-logo {
+  max-height: 300px; /* Increase max-height of the logo */
+  z-index: 10; /* Ensure the logo is above other layers */
 }
