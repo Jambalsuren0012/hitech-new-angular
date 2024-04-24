@@ -1,32 +1,5 @@
-/* Initial state of the curtains */
-.curtains {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  width: 0;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: width 0.5s ease;
-  z-index: 1000;
-  overflow: hidden;
-}
-
-/* Active state of the curtains */
-.curtains.active {
-  width: 50%; /* Adjust this value to control the opening width */
-  left: 0;
-  transition: width 0.5s ease, left 0.5s ease;
-}
-
-/* Modal content */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50%; /* Should match the width of the curtains */
-  height: 100%;
-  background-color: white;
-  z-index: 1001;
-  overflow-y: auto;
+.absolute-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }

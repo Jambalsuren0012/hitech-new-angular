@@ -21,9 +21,11 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { RouterLink } from '@angular/router';
 import { RouterLinkActive } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 const approutes: Routes = [
   { path: 'comingsoon', component: ComingSoonComponent },
+  { path: '', component: HomeComponent },
 ];
 
 @NgModule({
@@ -38,6 +40,7 @@ const approutes: Routes = [
     FortinetComponent,
     FooterComponent,
     ComingSoonComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,9 @@ const approutes: Routes = [
     RouterOutlet,
     RouterLink,
     RouterLinkActive,
+    RouterModule.forRoot(approutes),
   ],
+  exports: [RouterModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })

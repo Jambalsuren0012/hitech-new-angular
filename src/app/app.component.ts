@@ -2,20 +2,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <app-navbar #navbar></app-navbar>
-    <app-header #header></app-header>
-    <app-outsourcing #outsourcing> </app-outsourcing>
-    <app-ms365 #ms365></app-ms365>
-    <app-fortinet #fortinet></app-fortinet>
-
-    <app-it-managed-service #itManagedService></app-it-managed-service>
-    <app-service-support #serviceSupport></app-service-support>
-
-    <app-footer #footer> </app-footer>
-
-    <!-- <app-contact> </app-contact> -->
-  `,
+  templateUrl: './app.component.html',
   styles: [],
 })
 export class AppComponent {
@@ -26,7 +13,7 @@ export class AppComponent {
   @ViewChild('ms365', { static: true }) ms365!: ElementRef;
   @ViewChild('fortinet', { static: true }) fortinet!: ElementRef;
   @ViewChild('serviceSupport', { static: true }) serviceSupport!: ElementRef;
-  @ViewChild('serviceSupport', { static: true }) footer!: ElementRef;
+  @ViewChild('footer', { static: true }) footer!: ElementRef;
 
   constructor() {}
 

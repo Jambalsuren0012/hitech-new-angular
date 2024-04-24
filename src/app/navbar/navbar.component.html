@@ -6,14 +6,11 @@
     <div
       class="md:h-16 h-28 mx-auto md:px-36 container flex items-center justify-between flex-wrap md:flex-nowrap"
     >
-      <!-- Logo -->
-      <div class="text-indigo-500 flex">
-        <!-- Heroicon - Chip Outline -->
-
-        <img src="../../assets/img/logo.png" alt="" class="h-14 w-21" />
-        <p class="text-white text-xl md:py-3 sm:py-2 md md:px-1">
-          HITECH SOLUTION
-        </p>
+      <div class="text-indigo-500">
+        <a class="flex" href="/">
+          <img src="../../assets/img/logo.png" alt="" class="h-14 w-21" />
+          <p class="text-white text-xl py-4 px-1">HITECH SOLUTION</p>
+        </a>
       </div>
       <div class="text-white order-3 w-full md:w-auto md:order-2">
         <ul
@@ -22,6 +19,7 @@
         >
           <li
             (click)="tohome()"
+            routerLink="/"
             routerLinkActive="activate"
             class="md:px-4 md:py-2 text-md text-white hover:text-indigo-800"
           >
@@ -71,31 +69,12 @@
     *ngIf="showModal"
     class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex"
   >
-    <button
-      type="button"
-      (click)="toggleModal()"
-      class="absolute top-20 right-80 m-4 p-2 rounded-full bg-black hover:bg-gray-300 focus:bg-gray-300 focus:outline-none"
-    >
-      <svg
-        class="w-5 h-5 text-gray-600"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M6 18L18 6M6 6l12 12"
-        />
-      </svg>
-    </button>
     <div class="grid grid-cols-1 lg:grid-cols-2">
       <div
-        class="relative flex items-end px-4 pb-10 pt-60 sm:pb-16 md:justify-center lg:pb-24 bg-gray-50 sm:px-6 lg:px-8"
+        class="relative hidden sm:block items-end px-4 pb-10 pt-60 sm:pb-16 md:justify-center lg:pb-24 bg-gray-50 sm:px-6 lg:px-8"
       >
         <div class="absolute inset-0">
+          <!-- Contact image as background -->
           <img
             class="object-cover object-top w-full h-full"
             src="../../assets/img/contact img.png"
@@ -105,6 +84,7 @@
         <div
           class="absolute inset-0 bg-gradient-to-t from-black to-transparent"
         >
+          <!-- Logo positioned at the top center -->
           <img
             class="pl-4"
             src="../../assets/img/hitech logo contact.png"
@@ -124,8 +104,28 @@
       </div>
 
       <div
-        class="flex items-center justify-center px-4 py-10 bg-white sm:px-6 lg:px-8 sm:py-16 lg:py-24"
+        class="flex relative items-center justify-center px-4 py-10 bg-white sm:px-6 lg:px-8 sm:py-16 lg:py-24"
       >
+        <button
+          type="button"
+          (click)="toggleModal()"
+          class="absolute-button m-4 p-2 rounded-full bg-black hover:bg-gray-300 focus:bg-gray-300 focus:outline-none"
+        >
+          <svg
+            class="w-5 h-5 text-gray-600"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
         <div class="xl:w-full xl:max-w-sm 2xl:max-w-md xl:mx-auto">
           <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl">
             Холбоо барих
