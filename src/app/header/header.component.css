@@ -2,7 +2,11 @@
   background-image: url(../../assets/img/hitech\ header\ background.png);
   background-size: cover;
 }
-
+@media only screen and (max-width: 768px) {
+  .hero-bg {
+    height: 60vh;
+  }
+}
 @keyframes slideLeft {
   0% {
     transform: translateX(-100%);
